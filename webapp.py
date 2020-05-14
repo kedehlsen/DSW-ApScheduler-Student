@@ -9,13 +9,13 @@ app = Flask(__name__)
 
 #TODO: add the code for the ApScheduler here
 def scheduled_task():
-    timed_message = Markup("<p>It is now 3:15pm</p>")
+    timed_message = Markup("<p>It is now 3:18pm</p>")
  
 @app.route('/')
 def welcome():
    scheduler = BackgroundScheduler({'apscheduler.timezone':'America/Los_Angeles'})
    scheduler.start()
-   scheduler.add_job(scheduled_task, trigger='cron', hour=15, minute=15)
+   scheduler.add_job(scheduled_task, trigger='cron', hour=15, minute=18)
    return render_template('home.html', timed_message= message)
   
 if __name__=="__main__":
