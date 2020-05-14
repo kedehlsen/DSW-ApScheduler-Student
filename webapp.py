@@ -10,6 +10,7 @@ app = Flask(__name__)
 #TODO: add the code for the ApScheduler here
 def scheduled_task():
     timed_message = Markup("<p>It is now 3:25pm</p>")
+    return timed_message
  
 @app.route('/')
 def welcome():
